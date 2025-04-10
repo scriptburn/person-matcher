@@ -89,10 +89,7 @@ person-matcher/
 
 This project is licensed for **non-commercial use only**.
 
-If you wish to use this software in a commercial product or service, please contact the author for a commercial license:
-
-📩 [your-email@example.com]  
-🌐 [your-website-or-license-page.com]
+If you wish to use this software in a commercial product or service, please contact the author
 
 ---
 
