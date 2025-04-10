@@ -95,7 +95,7 @@ If you wish to use this software in a commercial product or service, please cont
 
 ## 👩‍💻 Author
 
-Created by [Your Name] — a passionate AI + Web developer from India 🇮🇳  
+Created by Rajneesh ojha— a passionate AI + Web developer from India 🇮🇳  
 Drop a ⭐ if this project helped you!
 
 ---
