@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  matcher:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "8501:8501"
+    environment:
+      - PYTHONUNBUFFERED=1

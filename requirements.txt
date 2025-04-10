@@ -1,0 +1,8 @@
+streamlit
+ultralytics==8.1.15
+torch>=1.13
+torchvision
+scikit-learn
+opencv-python-headless
+Pillow
+torchreid @ git+https://github.com/KaiyangZhou/deep-person-reid.git

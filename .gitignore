@@ -1,0 +1,55 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*.so
+*.pyd
+*.pyo
+*.pkl
+*.ipynb_checkpoints/
+
+# Virtualenv / Poetry / Pipenv
+.venv/
+env/
+venv/
+pip-wheel-metadata/
+pip-log.txt
+
+# Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+.streamlit/cache/
+.streamlit/*.json
+
+# Dataset files
+data/labels/labels.jsonl
+data/crops/
+
+# Uploads + runtime detection outputs
+uploads/
+runtime_crops/
+crops/  # legacy path
+
+# Model files
+*.pt
+*.pth
+*.onnx
+*.h5
+*.tflite
+runs/
+weights/
+
+# Docker & Logs
+*.log
+*.pid
+*.sqlite3
+.DS_Store
+*.db
+*.bak
+
+# VSCode or JetBrains
+.vscode/
+.idea/
+
+# OS-specific
+Thumbs.db
+.DS_Store
