@@ -1,47 +1,108 @@
-# 👤 Person Matcher AI
+# 🧍‍♂️ Person Matcher AI
 
-This app detects and matches people across two images taken at the same location from different perspectives using YOLOv8 and TorchReID.
+A Streamlit-based AI tool that detects and matches people across multiple images taken from different angles or devices — ideal for tourist photos at places like the Taj Mahal.
 
-### 🧠 Features
-
-- Detect people using YOLOv8
-- Re-identify people using TorchReID (OSNet)
-- Streamlit-based UI
-- Dockerized for easy deployment
+[![License: Non-Commercial](https://img.shields.io/badge/license-non--commercial-blue.svg)](LICENSE)
 
 ---
 
-### 🚀 Run via Docker
+## ✨ Features
+
+- 📤 Upload multiple images
+- 🧠 Detect people using YOLOv8
+- 🧬 Extract features via TorchReID
+- 📈 Visual match grouping based on cosine similarity
+- 🧮 Auto or manual thresholding
+- ✅ Label match results as correct/incorrect
+- 📦 Save labeled pairs for training dataset
+- 📁 Export dataset for COCO/CSV training
+- 🐳 Dockerized with Makefile for easy dev/prod workflows
+
+---
+
+## 🖼️ Use Case
+
+> Given Image A and Image B taken at the same place by two different people, the app identifies if both images contain the same individual — even from different angles or cameras.
+
+---
+
+## 🚀 Run Locally (Dev Mode)
 
 ```bash
-git clone https://github.com/your-username/person-matcher.git
-cd person-matcher
-docker build -t person-matcher .
-docker run -p 8501:8501 person-matcher
+make build
+make dev
+```
+
+Then visit: [http://localhost:8501](http://localhost:8501)
+
+---
+
+## 🏗️ Project Structure
+
+```
+person-matcher/
+├── app/
+│   ├── detector.py      # Person detection (YOLOv8 or simulated)
+│   ├── reid.py          # Feature extraction and re-ID
+├── web/
+│   └── app.py           # Streamlit frontend
+├── data/
+│   ├── crops/           # Saved validated crop pairs
+│   └── labels/          # labels.jsonl with group metadata
+├── uploads/             # Temp uploaded images
+├── runtime_crops/       # Temp detection results
+├── Dockerfile
+├── Makefile
+├── requirements.txt
+└── .gitignore
 ```
 
 ---
 
-### 🧪 Sample Use Case
+## 📦 Dataset Workflow
 
-Use this to match friends taking pictures at the Taj Mahal from different angles or in crowded tourist places.
-
----
-
-### 📁 Folder Structure
-
-project-root/
-├── Dockerfile
-├── requirements.txt
-├── web/          # Streamlit app
-├── app/          # Detection + ReID logic
-├── models/       # YOLO weights
-├── crops/        # Auto-generated crops
-└── uploads/      # Uploaded files
+1. Upload multiple images
+2. Confirm visually matched people
+3. Save labeled data
+4. Export dataset for training
 
 ---
 
-### 📝 Credits
+## 📤 Exporting
 
-- [YOLOv8](https://github.com/ultralytics/ultralytics)
-- [TorchReID](https://github.com/KaiyangZhou/deep-person-reid)
+- Export labeled dataset to COCO or CSV for training (coming soon)
+- Future: `make export-coco` or `make export-csv`
+
+---
+
+## 🧪 Tech Stack
+
+- Streamlit
+- YOLOv8 (Ultralytics)
+- TorchReID
+- NumPy + Scikit-learn
+- Docker + Makefile
+
+---
+
+## 📜 License
+
+This project is licensed for **non-commercial use only**.
+
+If you wish to use this software in a commercial product or service, please contact the author for a commercial license:
+
+📩 [your-email@example.com]  
+🌐 [your-website-or-license-page.com]
+
+---
+
+## 👩‍💻 Author
+
+Created by [Your Name] — a passionate AI + Web developer from India 🇮🇳  
+Drop a ⭐ if this project helped you!
+
+---
+
+## 📄 License File
+
+See the [LICENSE](LICENSE) file in this repository for full details.
